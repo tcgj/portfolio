@@ -1,7 +1,8 @@
 {
   "name": "terence-portfolio",
+  "description": "GPL-3.0-or-later",
   "private": true,
-  "license": "UNLICENSED",
+  "license": "GPLV3",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
