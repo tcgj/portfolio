@@ -1,0 +1,26 @@
+.btn-nav, .btn-social {
+    color: var(--text-col);
+    text-decoration: none;
+    padding: 0.375em 0.75em;
+    border-radius: 0.375em;
+
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-social {
+    font-size: 2em;
+    padding: 0.25em;
+    border-radius: 0em;
+}
+
+.btn-nav:hover, .btn-social:hover {
+    color: var(--dark-col-alt);
+    font-weight: bolder;
+    transform: translateY(-3px);
+}

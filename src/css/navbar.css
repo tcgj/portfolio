@@ -1,0 +1,28 @@
+header {
+    position:absolute;
+    top:0;
+    left:0;
+    display: flex;
+
+    width: 100%;
+    justify-content:space-between;
+    align-items: center;
+    padding: 1.5em 2em 1em;
+    z-index: 1;
+}
+
+@media only screen and (max-width: 992px) {
+    header {
+        padding: 1.5em 1em 1em;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    nav {
+        display: none;
+    }
+
+    header {
+        justify-content: flex-end;
+    }
+}

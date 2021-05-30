@@ -1,0 +1,40 @@
+[
+    {
+        "title": "toki",
+        "caption": "",
+        "description": "A modular monte-carlo ray tracing renderer that runs on the CPU and supports multithreading. A pet-project that I had created, to learn more about computer graphics and to understand the implementation of various legacy as well as modern global illumination methods.",
+        "sites": [
+            {
+                "link": "https://github.com/tcgj/toki",
+                "text": "View on GitHub",
+                "icon": "devicon-github-original"
+            }
+        ],
+        "background": "../images/toki.png",
+        "decorations": [
+            "C++",
+            "CMake"
+        ]
+    },
+    {
+        "title": "Aether",
+        "caption": "Amongst the clouds lies a world to be discovered",
+        "description": "A co-op multiplayer adventure game with a unique premise - the world around you is only visible to you beneath your feet. Made for a game development module over the span of three months, written in Unity.",
+        "sites": [
+            {
+                "link": "https://github.com/eclmist/Aether",
+                "text": "View on GitHub",
+                "icon": "devicon-github-original"
+            },
+            {
+                "link": "https://isteps.comp.nus.edu.sg/event/cs3247/module/AY2019-20+Semester_2+Task_1/project/1",
+                "text": "Visit Project Page"
+            }
+        ],
+        "background": "../images/aether.jpeg",
+        "decorations": [
+            "Unity 3D",
+            "Forge Networking"
+        ]
+    }
+]

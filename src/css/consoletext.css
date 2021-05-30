@@ -1,0 +1,70 @@
+.blinker {
+    color: transparent;
+    user-select: none;
+    pointer-events: none;
+}
+
+.blinker-box {
+    animation: box-blink 1s;
+    animation-delay: calc(0.2s + var(--blink-delay));
+    animation-iteration-count: var(--iterations);
+    animation-timing-function: step-start;
+}
+
+.blinker-underscore {
+    animation: underscore-blink 1s;
+    animation-delay: calc(0.2s + var(--blink-delay));
+    animation-iteration-count: var(--iterations);
+    animation-timing-function: step-start;
+}
+
+.console-text {
+    width: 100%;
+}
+
+.console-text-char {
+    color: transparent;
+}
+
+.console-text-char-anim {
+    animation: show-text 0.15s;
+    animation-delay: calc(var(--delay) + 0.08s * var(--idx));
+    animation-timing-function: step-start;
+    animation-fill-mode: forwards;
+}
+
+@keyframes box-blink {
+    0% {
+        background-color: unset;
+    }
+    50% {
+        background-color: var(--secondary-col);
+    }
+}
+
+@keyframes underscore-blink {
+    0% {
+        text-decoration: unset;
+    }
+    50% {
+        text-decoration: underline var(--secondary-col);
+    }
+}
+
+@keyframes show-text {
+    0% {
+        text-decoration: unset;
+        color: transparent;
+    }
+    50% {
+        text-decoration: underline var(--secondary-col);
+        color: transparent;
+    }
+    90% {
+        text-decoration: unset;
+        color: unset;
+    }
+    100% {
+        color: unset;
+    }
+}

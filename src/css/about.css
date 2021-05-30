@@ -1,0 +1,129 @@
+.about {
+    padding: 4em 0em;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-header {
+    text-align: left;
+    font-size: 3em;
+    padding: 0em 1em;
+}
+
+.about-container {
+    display: grid;
+    padding: 4em;
+    grid-template-columns: 10fr 1fr 10fr;
+}
+
+.about-description {
+    --slope: 5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-column: 1 / 2;
+    padding: 2em;
+    background-color: #7a478631;
+    clip-path: polygon(
+        0% 0%,
+        0% calc(100% - var(--slope)),
+        var(--slope) 100%,
+        100% 100%,
+        100% 0%
+    );
+}
+
+.horizontal-line {
+    border: none;
+    height: 1px;
+    background: linear-gradient(to right, transparent, white 30%, white 70%, transparent)
+}
+
+.about-image {
+    --slope: 5em;
+    grid-column: 3 / 4;
+    clip-path: polygon(
+        0% 0%,
+        0% 100%,
+        100% 100%,
+        100% var(--slope),
+        calc(100% - var(--slope)) 0%
+    );
+    position: relative;
+}
+
+.hr-top {
+    display: none;
+}
+
+@media only screen and (max-width: 992px) {
+    .about-container {
+        grid-template-columns: 10fr 1fr 5fr;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .about-container {
+        display: flex;
+        flex-direction: column;
+        grid-template-columns: unset;
+    }
+
+    .about-description {
+        clip-path: polygon(
+            0% 0%,
+            0% 100%,
+            100% 100%,
+            100% var(--slope),
+            calc(100% - var(--slope)) 0%
+        );
+    }
+
+    .about-image {
+        width: 60vw;
+        margin-top: 2em;
+        align-self: flex-start;
+        clip-path: polygon(
+            0% 0%,
+            0% calc(100% - var(--slope)),
+            var(--slope) 100%,
+            100% 100%,
+            100% 0%
+        );
+        padding: 1em 1em 0em 0em;
+    }
+
+    .about-image::after {
+        --thickness: 0.2em;
+        display: block;
+        content: "";
+        width: 70%;
+        height: 70%;
+        top: 0;
+        right: 0;
+        position: absolute;
+        background: linear-gradient(to top right, transparent 50%, #ffffff88);
+        clip-path: polygon(
+            0% 0%,
+            0% var(--thickness),
+            calc(100% - var(--thickness)) var(--thickness),
+            calc(100% - var(--thickness)) 100%,
+            100% 100%,
+            100% 0%
+        );
+    }
+
+    .hr-top {
+        display: block;
+    }
+
+    .hr-bottom {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .about-container {
+        padding: 4em 2em;
+    }
+}

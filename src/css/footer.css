@@ -1,0 +1,43 @@
+.link {
+    color: var(--text-col);
+}
+
+.link:hover {
+    color: var(--secondary-col);
+}
+
+.link:active {
+    color: var(--secondary-col-alt);
+}
+
+.footer-cp {
+    grid-area: copyright;
+    font-size: 0.8em;
+}
+
+.footer-nav {
+    grid-area: nav;
+    font-size: 0.9em;
+    justify-self: end;
+}
+
+.footer {
+    display: grid;
+    grid-template-areas:
+        "copyright"
+    ;
+    margin-top: auto;
+    width: 100%;
+    padding: 2em 2.5em 2em 2.5em;
+    color: var(--text-col);
+    z-index: 1;
+    user-select: none;
+}
+
+.footer-to-top {
+    gap: 2em 1em;
+    grid-template-areas:
+        "nav"
+        "copyright"
+    ;
+}
