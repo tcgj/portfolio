@@ -15,6 +15,7 @@ export const Head = ({ title, description }: HeadProps) => {
                     title
                     description
                     author
+                    themeColor
                 }
             }
         }`
@@ -35,16 +36,20 @@ export const Head = ({ title, description }: HeadProps) => {
                     content: site.siteMetadata.author
                 },
                 {
+                    name: "theme-color",
+                    content: site.siteMetadata.themeColor
+                },
+                {
                     property: `og:title`,
-                    content: title || site.siteMetadata.title,
+                    content: title || site.siteMetadata.title
                 },
                 {
                     property: 'og:description',
-                    content: description || site.siteMetadata.description,
+                    content: description || site.siteMetadata.description
                 },
                 {
                     property: `og:type`,
-                    content: `website`,
+                    content: `website`
                 }
                 // { // Add in future
                 //     property: 'og:image',

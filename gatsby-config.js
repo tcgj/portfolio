@@ -10,7 +10,8 @@ module.exports = {
   siteMetadata: {
     title: "Terence Chong | Software Developer",
     description: "Portfolio of Terence Chong – a software engineer with strong interests in computer graphics and image processing.",
-    author: "Terence Chong"
+    author: "Terence Chong",
+    themeColor: "#44318d"
   },
   plugins: [
     "gatsby-plugin-react-helmet",
