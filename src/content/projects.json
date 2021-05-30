@@ -2,7 +2,7 @@
     {
         "title": "toki",
         "caption": "",
-        "description": "A modular monte-carlo ray tracing renderer that runs on the CPU and supports multithreading. A pet-project that I had created, to learn more about computer graphics and to understand the implementation of various legacy as well as modern global illumination methods.",
+        "description": "A modular monte-carlo ray tracing renderer that runs on the CPU and supports multithreading. A pet-project that I had started, to learn more about computer graphics and to understand the implementation of various legacy as well as modern global illumination methods.",
         "sites": [
             {
                 "link": "https://github.com/tcgj/toki",
@@ -19,7 +19,7 @@
     {
         "title": "Aether",
         "caption": "Amongst the clouds lies a world to be discovered",
-        "description": "A co-op multiplayer adventure game with a unique premise - the world around you is only visible to you beneath your feet. Made for a game development module over the span of three months, written in Unity.",
+        "description": "A co-op multiplayer adventure game with a unique premise - the world around you is only visible to you beneath your feet. This game was made for a game development module over the span of three months, and is written in Unity.",
         "sites": [
             {
                 "link": "https://github.com/eclmist/Aether",

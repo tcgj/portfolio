@@ -1,5 +1,5 @@
 .projects {
-    --start-height: 50%;
+    --start-height: 20%;
     position: relative;
     padding: 4em 0em;
     display: flex;

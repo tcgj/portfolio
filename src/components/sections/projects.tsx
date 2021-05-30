@@ -64,7 +64,7 @@ const ProjectDetail = ({
 }
 
 export const Projects = () => {
-    const [sectionRef, isSectionVisible] = useScreenVisible({ threshold: 0.1 })
+    const [sectionRef, isSectionVisible] = useScreenVisible({ threshold: 0.05 })
     const [titleRef, isTitleVisible] = useScreenVisible({ threshold: 1.0 })
     const shouldLoadSection = useOneWaySwitch(isSectionVisible)
     const shouldLoadTitle = useOneWaySwitch(isTitleVisible)
