@@ -6,44 +6,13 @@
     flex-direction: column;
     background: var(--dark-secondary-col-alt);
     clip-path: polygon(
-        0% var(--start-height),
-        50% calc(var(--start-height) + 2em),
-        100% var(--start-height),
-        100% calc(100% - 2em),
-        50% 100%,
-        0% calc(100% - 2em),
-        0% 1px, 1px 1px, 1px 0%, 0% 0% /* hidden pixel to trigger intersection observer */
-    );
-}
-
-.projects-anim {
-    animation: slider 1.5s forwards;
-    animation-timing-function: cubic-bezier(0.16, 0.18, 0, 1);
-}
-
-@keyframes slider {
-    0% {
-        clip-path: polygon(
-            0% var(--start-height),
-            50% calc(var(--start-height) + 2em),
-            100% var(--start-height),
-            100% calc(100% - 2em),
-            50% 100%,
-            0% calc(100% - 2em),
-            0% 1px, 1px 1px, 1px 0%, 0% 0% /* hidden pixel */
-        );
-    }
-    100% {
-        clip-path: polygon(
             0% 0%,
             50% 2em,
             100% 0%,
             100% calc(100% - 2em),
             50% 100%,
-            0% calc(100% - 2em),
-            0% 1px, 1px 1px, 1px 0%, 0% 0% /* hidden pixel */
+            0% calc(100% - 2em)
         );
-    }
 }
 
 .projects-drop-shadow {
@@ -107,6 +76,7 @@
     background-color: var(--dark-secondary-col);
     opacity: 20%;
     transition: opacity 0.5s;
+    pointer-events: none;
 }
 
 .project-container:hover .project-background {

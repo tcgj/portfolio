@@ -50,6 +50,7 @@
         calc(100% - var(--slope)) 0%
     );
     position: relative;
+    pointer-events: none;
 }
 
 .hr-top {

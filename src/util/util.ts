@@ -1,5 +1,3 @@
-type StringNull = string | undefined
-
-export const classNames = (...names: StringNull[]) => {
-    return names.join(" ")
-}
+export const classNames = (...names: (string | false | null | undefined)[]) => {
+    return names.filter(entry => entry).join(" ");
+};

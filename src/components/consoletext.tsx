@@ -54,7 +54,8 @@ export const ConsoleText = ({
         return text.split("").map((chr, index) => (
             <span
                 aria-hidden
-                key={index} className={classNames("console-text-char", shouldStart ? "console-text-char-anim" : "")}
+                key={index}
+                className={classNames("console-text-char", shouldStart && "console-text-char-anim")}
                 style={{
                     "--idx": index,
                     ...style
@@ -67,19 +68,19 @@ export const ConsoleText = ({
 
     return (
         <span
-            aria-label={text}
             className={classNames(className, "console-text")}
             style={{
-                "--delay": `calc(${delay}s + ${!skipBlink ? 2.2 : 0}s)`
+                "--delay": `calc(${delay}s + ${skipBlink ? 0 : 2.2}s)`
             } as React.CSSProperties}
             {...rest}
         >
+            <span className="sr-only">{text}</span>
             {!skipBlink && (
                 <CursorBlinker
                     cursorType="box"
                     iterations={2}
                     shouldStart={shouldStart}
-                    style={{ position: "absolute" }}
+                    className="console-text-blinker"
                 />
             )}
             {content}

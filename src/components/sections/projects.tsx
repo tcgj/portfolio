@@ -64,9 +64,7 @@ const ProjectDetail = ({
 };
 
 export const Projects = () => {
-    const [sectionRef, isSectionVisible] = useScreenVisible({ threshold: 0.05 });
     const [titleRef, isTitleVisible] = useScreenVisible({ threshold: 1.0 });
-    const shouldLoadSection = useOneWaySwitch(isSectionVisible);
     const shouldLoadTitle = useOneWaySwitch(isTitleVisible);
 
     const { projectList } = useStaticQuery(
@@ -102,8 +100,7 @@ export const Projects = () => {
 
     return (
         <section
-            ref={sectionRef}
-            className={classNames("projects", shouldLoadSection ? "projects-anim" : "")}
+            className="projects"
             id="projects"
         >
             <div className="projects-drop-shadow">

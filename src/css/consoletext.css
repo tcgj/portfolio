@@ -22,6 +22,10 @@
     width: 100%;
 }
 
+.console-text-blinker {
+    position: absolute;
+}
+
 .console-text-char {
     color: transparent;
 }
