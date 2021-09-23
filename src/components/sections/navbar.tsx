@@ -1,19 +1,9 @@
 import * as React from "react";
 
 import "../../css/navbar.css";
-import { NavButton, SocialButton } from "../buttons";
+import { NavButton, NavButtonProps, SocialButton, SocialButtonProps } from "../buttons";
 
-type NavInfo = {
-    text: string;
-    to: string;
-};
-
-type SocialInfo = {
-    icon: string;
-    to: string;
-};
-
-const navList = [
+const navList: NavButtonProps[] = [
     {
         text: "Home",
         to: "/"
@@ -28,30 +18,29 @@ const navList = [
     }
 ];
 
-const socialList = [
+const socialList: SocialButtonProps[] = [
     {
+        name: "GitHub",
         icon: "devicon-github-original",
         to: "https://github.com/tcgj"
     },
     {
+        name: "LinkedIn",
         icon: "devicon-linkedin-plain",
-        to: "https://www.linkedin.com/in/terence-chong-guang-jun-60810b166/"
+        to: "https://www.linkedin.com/in/terencecgj/"
     }
 ];
 
-const generateNavLinks = (navList: NavInfo[]) => {
-    return navList.map(({ text, to }: NavInfo, index: number) => (
-        <NavButton to={to} key={index}>
-            {text}
-        </NavButton>
+const generateNavLinks = (navList: NavButtonProps[]) => {
+    return navList.map(({ text, to }) => (
+        <NavButton text={text} to={to} key={text} />
     ));
 };
 
 
-const generateSocials = (socialList: SocialInfo[]) => {
-    return socialList.map(({ icon, to }: SocialInfo, index: number) => (
-        <SocialButton to={to} icon={icon} key={index}>
-        </SocialButton>
+const generateSocials = (socialList: SocialButtonProps[]) => {
+    return socialList.map(({ name, icon, to }) => (
+        <SocialButton to={to} icon={icon} name={name} key={name} />
     ));
 };
 

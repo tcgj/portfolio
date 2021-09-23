@@ -1,21 +1,24 @@
 .blinker {
     color: transparent;
+    opacity: 0;
     user-select: none;
     pointer-events: none;
 }
 
-.blinker-box {
-    animation: box-blink 1s;
+.blinker-box,
+.blinker-underscore {
+    animation: blink 1s;
     animation-delay: calc(0.2s + var(--blink-delay));
     animation-iteration-count: var(--iterations);
     animation-timing-function: step-start;
 }
 
+.blinker-box {
+    background-color: var(--secondary-col);
+}
+
 .blinker-underscore {
-    animation: underscore-blink 1s;
-    animation-delay: calc(0.2s + var(--blink-delay));
-    animation-iteration-count: var(--iterations);
-    animation-timing-function: step-start;
+    text-decoration: underline var(--secondary-col);
 }
 
 .console-text {
@@ -37,21 +40,12 @@
     animation-fill-mode: forwards;
 }
 
-@keyframes box-blink {
+@keyframes blink {
     0% {
-        background-color: unset;
+        opacity: 0%;
     }
     50% {
-        background-color: var(--secondary-col);
-    }
-}
-
-@keyframes underscore-blink {
-    0% {
-        text-decoration: unset;
-    }
-    50% {
-        text-decoration: underline var(--secondary-col);
+        opacity: 100%;
     }
 }
 

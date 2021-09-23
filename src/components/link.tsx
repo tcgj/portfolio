@@ -3,7 +3,7 @@ import { GatsbyLinkProps, Link as GatsbyLink } from "gatsby";
 
 // Custom Link typing workaround based on
 // https://github.com/gatsbyjs/gatsby/issues/16682#issuecomment-718155902
-type LinkProp = Omit<GatsbyLinkProps<Record<string, unknown>>, 'ref'>;
+type LinkProps = Omit<GatsbyLinkProps<Record<string, unknown>>, 'ref'>;
 
 export const Link = ({
     to,
@@ -11,7 +11,7 @@ export const Link = ({
     partiallyActive,
     children,
     ...rest
-}: LinkProp) => {
+}: LinkProps) => {
     const external = !/^\/(?!\/)/.test(to);
     const file = /\.[0-9a-z]+$/i.test(to);
     // Use Gatsby Link for internal links, and <a> for others

@@ -26,6 +26,9 @@ export const Head = ({ title, description }: HeadProps) => {
             title={title}
             titleTemplate={`%s · ${site.siteMetadata.title}`}
             defaultTitle={site.siteMetadata.title}
+            htmlAttributes={{
+                lang: "en"
+            }}
             meta={[
                 {
                     name: "description",
@@ -51,7 +54,7 @@ export const Head = ({ title, description }: HeadProps) => {
                     property: `og:type`,
                     content: `website`
                 }
-                // { // Add in future
+                // { // Add in future for embed link thumbnail
                 //     property: 'og:image',
                 //     content: 'image-url-here',
                 // }

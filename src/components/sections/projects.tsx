@@ -84,8 +84,8 @@ export const Projects = () => {
                             childImageSharp {
                                 gatsbyImageData(
                                     layout: FULL_WIDTH,
-                                    quality: 100,
-                                    webpOptions: { quality: 100 }
+                                    quality: 90,
+                                    webpOptions: { quality: 90 }
                                     placeholder: BLURRED,
                                     transformOptions: { cropFocus: CENTER }
                                 )

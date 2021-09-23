@@ -1,24 +1,16 @@
 import * as React from "react";
 
 import "../css/404.css";
-import { Head } from "../components/head";
-import { Navbar } from "../components/sections/navbar";
-import { Footer } from "../components/sections/footer";
+import { PageLayout } from "../components/pagelayout";
 
 export const Error = () => {
     return (
-        <>
-            <Head />
-            <div className="bg" />
-            <div className="scroll-area">
-                <Navbar />
-                <div className="error">
-                    <h1>404</h1>
-                    <p>Page Not Found</p>
-                </div>
-                <Footer />
+        <PageLayout>
+            <div className="error">
+                <h1>404</h1>
+                <p>Page Not Found</p>
             </div>
-        </ >
+        </PageLayout>
     );
 };
 

@@ -1,4 +1,4 @@
-.btn-nav, .btn-social {
+.btn-nav, .btn-social-link {
     color: var(--text-col);
     text-decoration: none;
     padding: 0.375em 0.75em;
@@ -14,13 +14,37 @@
 }
 
 .btn-social {
+    position: relative;
+}
+
+.btn-social-link {
     font-size: 2em;
-    padding: 0.25em;
+    padding: 0.25em 0.5em;
     border-radius: 0em;
 }
 
-.btn-nav:hover, .btn-social:hover {
+.btn-social-name {
+    right: 50%;
+    width: 150px;
+    margin-right: -75px;
+
+    text-align: center;
+    position: absolute;
+    color: transparent;
+    user-select: none;
+    pointer-events: none;
+    transition: all 0.1s ease-in-out;
+    overflow: visible;
+}
+
+.btn-nav:hover,
+.btn-social-link:hover {
     color: var(--dark-col-alt);
     font-weight: bolder;
     transform: translateY(-3px);
+}
+
+.btn-social-link:hover ~ .btn-social-name {
+    color: var(--dark-col-alt);
+    font-weight: bolder;
 }
