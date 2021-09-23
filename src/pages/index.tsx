@@ -1,22 +1,18 @@
-import "bootstrap/dist/css/bootstrap.min.css"
-import "devicon/devicon.min.css"
+import "bootstrap/dist/css/bootstrap.min.css";
+import "devicon/devicon.min.css";
 
-import * as React from "react"
-import { Canvas } from "@react-three/fiber"
-import { OrbitControls } from "@react-three/drei"
+import * as React from "react";
+import { Canvas } from "@react-three/fiber";
 
-import "../css/index.css"
-import { Head } from "../components/head"
-import { ShaderDisplay } from "../components/shadercanvas"
-import { Navbar } from "../components/sections/navbar"
-import { Intro } from "../components/sections/intro"
-import { Projects } from "../components/sections/projects"
-import { About } from "../components/sections/about"
-import { Footer } from "../components/sections/footer"
+import "../css/index.css";
+import { Head } from "../components/head";
+import { Navbar } from "../components/sections/navbar";
+import { Intro } from "../components/sections/intro";
+import { Projects } from "../components/sections/projects";
+import { About } from "../components/sections/about";
+import { Footer } from "../components/sections/footer";
 
-import * as fragmentShader from "../shaders/frac2d.frag"
-
-export default function Index() {
+const Index = () => {
     return (
         <>
             <Head />
@@ -51,5 +47,7 @@ export default function Index() {
                 <Footer />
             </div>
         </>
-    )
-}
+    );
+};
+
+export default Index;

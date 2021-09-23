@@ -1,28 +1,28 @@
-import * as React from "react"
-import { graphql, useStaticQuery } from "gatsby"
-import { getImage, GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
+import * as React from "react";
+import { graphql, useStaticQuery } from "gatsby";
+import { getImage, GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
 
-import "../../css/projects.css"
-import { Link } from "../link"
-import { ConsoleText } from "../consoletext"
-import { useScreenVisible } from "../../hooks/usescreenvisible"
-import { useOneWaySwitch } from "../../hooks/useonewayswitch"
-import { classNames } from "../../util/util"
+import "../../css/projects.css";
+import { Link } from "../link";
+import { ConsoleText } from "../consoletext";
+import { useScreenVisible } from "../../hooks/usescreenvisible";
+import { useOneWaySwitch } from "../../hooks/useonewayswitch";
+import { classNames } from "../../util/util";
 
 type ProjectNodeType = {
-    title: string
-    caption: string
-    description: string
+    title: string;
+    caption: string;
+    description: string;
     sites: {
-        link: string
-        text: string
-        icon?: string
-    }[]
-    background: IGatsbyImageData
-    decorations: string[]
-}
+        link: string;
+        text: string;
+        icon?: string;
+    }[];
+    background: IGatsbyImageData;
+    decorations: string[];
+};
 
-type ProjectDetailProps = ProjectNodeType & React.ComponentPropsWithoutRef<"div">
+type ProjectDetailProps = ProjectNodeType & React.ComponentPropsWithoutRef<"div">;
 
 const ProjectDetail = ({
     title,
@@ -34,7 +34,7 @@ const ProjectDetail = ({
     className,
     ...rest
 }: ProjectDetailProps) => {
-    const image = getImage(background)
+    const image = getImage(background);
 
     return (
         <div className={classNames("project-container", className)} {...rest}>
@@ -60,14 +60,14 @@ const ProjectDetail = ({
                 ))}
             </div>
         </div >
-    )
-}
+    );
+};
 
 export const Projects = () => {
-    const [sectionRef, isSectionVisible] = useScreenVisible({ threshold: 0.05 })
-    const [titleRef, isTitleVisible] = useScreenVisible({ threshold: 1.0 })
-    const shouldLoadSection = useOneWaySwitch(isSectionVisible)
-    const shouldLoadTitle = useOneWaySwitch(isTitleVisible)
+    const [sectionRef, isSectionVisible] = useScreenVisible({ threshold: 0.05 });
+    const [titleRef, isTitleVisible] = useScreenVisible({ threshold: 1.0 });
+    const shouldLoadSection = useOneWaySwitch(isSectionVisible);
+    const shouldLoadTitle = useOneWaySwitch(isTitleVisible);
 
     const { projectList } = useStaticQuery(
         graphql`{
@@ -98,7 +98,7 @@ export const Projects = () => {
                 }
             }
         }`
-    )
+    );
 
     return (
         <section
@@ -117,10 +117,10 @@ export const Projects = () => {
                 />
             </h3>
             <div className="projects-wrapper">
-                {projectList.edges.map(({ node }: { node: ProjectNodeType }, idx: number) => (
+                {projectList.edges.map(({ node }: { node: ProjectNodeType; }, idx: number) => (
                     <ProjectDetail {...node} key={idx} />
                 ))}
             </div>
         </section>
-    )
-}
+    );
+};

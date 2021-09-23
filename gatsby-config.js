@@ -3,13 +3,13 @@
  *
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
-const path = require("path")
+const path = require("path");
 
 module.exports = {
   pathPrefix: "/portfolio",
   siteMetadata: {
     title: "Terence Chong | Software Developer",
-    description: "Portfolio of Terence Chong – a software engineer with strong interests in computer graphics and image processing.",
+    description: "Portfolio of Terence Chong – a software engineer with strong interests in web development and computer graphics.",
     author: "Terence Chong",
     themeColor: "#44318d"
   },
@@ -42,4 +42,4 @@ module.exports = {
       }
     }
   ]
-}
+};

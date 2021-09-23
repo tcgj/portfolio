@@ -1,11 +1,11 @@
-import * as React from "react"
-import { graphql, useStaticQuery } from "gatsby"
-import { Helmet } from "react-helmet"
+import * as React from "react";
+import { graphql, useStaticQuery } from "gatsby";
+import { Helmet } from "react-helmet";
 
 type HeadProps = {
-    title?: string
-    description?: string
-}
+    title?: string;
+    description?: string;
+};
 
 export const Head = ({ title, description }: HeadProps) => {
     const { site } = useStaticQuery(
@@ -19,7 +19,7 @@ export const Head = ({ title, description }: HeadProps) => {
                 }
             }
         }`
-    )
+    );
 
     return (
         <Helmet
@@ -57,5 +57,5 @@ export const Head = ({ title, description }: HeadProps) => {
                 // }
             ]}
         />
-    )
-}
+    );
+};

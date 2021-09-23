@@ -1,21 +1,21 @@
-import * as React from "react"
+import * as React from "react";
 
-import "../css/consoletext.css"
-import { classNames } from "../util/util"
+import "../css/consoletext.css";
+import { classNames } from "../util/util";
 
 type CursorProps = {
-    cursorType: "box" | "underscore"
-    iterations: number | "infinite"
-    delay?: number
-    shouldStart?: boolean
-} & React.ComponentPropsWithoutRef<"span">
+    cursorType: "box" | "underscore";
+    iterations: number | "infinite";
+    delay?: number;
+    shouldStart?: boolean;
+} & React.ComponentPropsWithoutRef<"span">;
 
 type ConsoleTextProps = {
-    text: string
-    delay?: number
-    shouldStart?: boolean
-    skipBlink?: boolean
-} & React.ComponentPropsWithoutRef<"span">
+    text: string;
+    delay?: number;
+    shouldStart?: boolean;
+    skipBlink?: boolean;
+} & React.ComponentPropsWithoutRef<"span">;
 
 export const CursorBlinker = ({
     cursorType,
@@ -38,8 +38,8 @@ export const CursorBlinker = ({
             children="T" // Decent sized character
             {...rest}
         />
-    )
-}
+    );
+};
 
 export const ConsoleText = ({
     text,
@@ -62,8 +62,8 @@ export const ConsoleText = ({
             >
                 {chr}
             </span>
-        ))
-    }, [text, shouldStart, style])
+        ));
+    }, [text, shouldStart, style]);
 
     return (
         <span
@@ -84,5 +84,5 @@ export const ConsoleText = ({
             )}
             {content}
         </span>
-    )
-}
+    );
+};

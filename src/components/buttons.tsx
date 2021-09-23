@@ -1,16 +1,16 @@
-import * as React from "react"
+import * as React from "react";
 
-import "../css/buttons.css"
-import { Link } from "./link"
-import { classNames } from "../util/util"
+import "../css/buttons.css";
+import { Link } from "./link";
+import { classNames } from "../util/util";
 
 type NavButtonProps = {
-    to: string
-} & React.ComponentPropsWithoutRef<"a">
+    to: string;
+} & React.ComponentPropsWithoutRef<"a">;
 
 type SocialButtonProps = {
-    icon: string
-} & NavButtonProps
+    icon: string;
+} & NavButtonProps;
 
 export const NavButton = ({
     to,
@@ -18,8 +18,8 @@ export const NavButton = ({
 }: NavButtonProps) => {
     return (
         <Link to={to} className="btn-nav" {...rest} />
-    )
-}
+    );
+};
 
 export const SocialButton = ({
     to,
@@ -28,5 +28,5 @@ export const SocialButton = ({
 }: SocialButtonProps) => {
     return (
         <Link to={to} className={classNames(icon, "btn-social")} {...rest} />
-    )
-}
+    );
+};

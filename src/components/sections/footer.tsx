@@ -1,12 +1,12 @@
-import * as React from "react"
+import * as React from "react";
 
-import "../../css/footer.css"
-import { Link } from "../link"
-import { classNames } from "../../util/util"
+import "../../css/footer.css";
+import { Link } from "../link";
+import { classNames } from "../../util/util";
 
 type FooterProps = {
-    backToTop?: boolean
-}
+    backToTop?: boolean;
+};
 
 export const Footer = ({
     backToTop = false
@@ -27,5 +27,5 @@ export const Footer = ({
                 )}
             </div>
         </footer>
-    )
-}
+    );
+};

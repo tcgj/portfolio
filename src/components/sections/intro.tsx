@@ -1,19 +1,19 @@
-import * as React from "react"
+import * as React from "react";
 
-import "../../css/intro.css"
-import { ConsoleText, CursorBlinker } from "../consoletext"
+import "../../css/intro.css";
+import { ConsoleText, CursorBlinker } from "../consoletext";
 
 export const Intro = () => {
-    const [hasAnimationEnded, setHasAnimationEnded] = React.useState(false)
-    const [blinkerVisible, setBlinkerVisible] = React.useState(false)
+    const [hasAnimationEnded, setHasAnimationEnded] = React.useState(false);
+    const [blinkerVisible, setBlinkerVisible] = React.useState(false);
 
     React.useEffect(() => {
-        let timer: NodeJS.Timeout;
-        if (hasAnimationEnded)
-            timer = setTimeout(() => setBlinkerVisible(true), 1000)
+        if (!hasAnimationEnded)
+            return;
 
-        return () => clearTimeout(timer)
-    }, [hasAnimationEnded])
+        const timer = setTimeout(() => setBlinkerVisible(true), 1000);
+        return () => clearTimeout(timer);
+    }, [hasAnimationEnded]);
 
     return (
         <section className="intro">
@@ -44,5 +44,5 @@ export const Intro = () => {
                 />
             </h2>
         </section>
-    )
-}
+    );
+};

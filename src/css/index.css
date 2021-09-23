@@ -52,6 +52,8 @@ canvas {
 }
 
 .scroll-area {
+    display: flex;
+    flex-direction: column;
     position: fixed;
     overflow: auto;
     top: 0;

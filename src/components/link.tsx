@@ -1,5 +1,5 @@
-import * as React from "react"
-import { GatsbyLinkProps, Link as GatsbyLink } from "gatsby"
+import * as React from "react";
+import { GatsbyLinkProps, Link as GatsbyLink } from "gatsby";
 
 // Custom Link typing workaround based on
 // https://github.com/gatsbyjs/gatsby/issues/16682#issuecomment-718155902
@@ -12,15 +12,15 @@ export const Link = ({
     children,
     ...rest
 }: LinkProp) => {
-    const external = !/^\/(?!\/)/.test(to)
-    const file = /\.[0-9a-z]+$/i.test(to)
+    const external = !/^\/(?!\/)/.test(to);
+    const file = /\.[0-9a-z]+$/i.test(to);
     // Use Gatsby Link for internal links, and <a> for others
     if (external || file) {
         return (
             <a href={to} {...rest}>
                 {children}
             </a>
-        )
+        );
     }
 
     return (
@@ -32,5 +32,5 @@ export const Link = ({
         >
             {children}
         </GatsbyLink>
-    )
-}
+    );
+};
