@@ -7,7 +7,7 @@ const metadata = {
     title: "Terence Chong | Software Developer",
     description: "Portfolio of Terence Chong – a software engineer with strong interests in web development and computer graphics.",
     author: "Terence Chong",
-    themeColor: "#44318d"
+    themeColor: "#5bb6c2"
 };
 
 module.exports = {
