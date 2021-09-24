@@ -33,7 +33,7 @@
     color: transparent;
     user-select: none;
     pointer-events: none;
-    transition: all 0.1s ease-in-out;
+    transition: all 0.2s step-start;
     overflow: visible;
 }
 
@@ -45,6 +45,7 @@
 }
 
 .btn-social-link:hover ~ .btn-social-name {
+    transition: all 0.2s step-end;
     color: var(--dark-col-alt);
     font-weight: bolder;
 }

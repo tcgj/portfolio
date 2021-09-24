@@ -20,7 +20,7 @@ export const About = () => {
                         quality: 100,
                         webpOptions: { quality: 100 }
                         placeholder: TRACED_SVG,
-                        tracedSVGOptions: { color: "#44318d", background: "#e98074" },
+                        tracedSVGOptions: { color: "#222838", background: "#b5e3e9" },
                         aspectRatio: 1,
                         transformOptions: { cropFocus: ENTROPY }
                     )

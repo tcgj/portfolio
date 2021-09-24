@@ -1,14 +1,14 @@
 :root {
-    --primary-col: #44318d;
-    --primary-col-alt: #e98074;
-    --secondary-col: #a4b3b6;
+    --primary-col: #031e22;
+    --primary-col-alt: #b6dce2;
+    --secondary-col: #fff5f4;
     --secondary-col-alt: #6e8286;
-    --dark-col: #2a1b3d;
-    --dark-col-alt: #1d0f2e;
-    --dark-secondary-col: #35276e;
-    --dark-secondary-col-alt: #2f2361;
-    --text-col: #eefcff;
-    --text-col-alt: #c7d8db;
+    --dark-col: #1f3941;
+    --dark-col-alt: #050808;
+    --dark-secondary-col: #37919c;
+    --dark-secondary-col-alt: #273435;
+    --text-col: #fff9f8;
+    --text-col-alt: #E9BBB5;
     --background-col: #000;
 
     --font-family: 'PT Mono', sans-serif;
@@ -34,6 +34,26 @@ body {
     font-weight: 400;
     font-size: 18px;
     color: var(--text-col);
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    pointer-events: none;
+    user-select: none;
+    opacity: 15%;
+    background: repeating-linear-gradient(
+        0deg,
+        var(--primary-col),
+        var(--primary-col) 2px,
+        transparent 1px,
+        transparent 3px
+    );
 }
 
 ::selection {

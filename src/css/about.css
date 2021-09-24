@@ -23,7 +23,7 @@
     justify-content: center;
     grid-column: 1 / 2;
     padding: 2em;
-    background-color: #7a478631;
+    background-color: #6e828631;
     clip-path: polygon(
         0% 0%,
         0% calc(100% - var(--slope)),

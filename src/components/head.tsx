@@ -39,10 +39,6 @@ export const Head = ({ title, description }: HeadProps) => {
                     content: site.siteMetadata.author
                 },
                 {
-                    name: "theme-color",
-                    content: site.siteMetadata.themeColor
-                },
-                {
                     property: `og:title`,
                     content: title || site.siteMetadata.title
                 },
